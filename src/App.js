@@ -14,8 +14,16 @@ function App() {
       setTranscription((prev) => prev + ' ' + data.transcription);
     });
 
+    clearHistory(); // Clear history when the app loads
     fetchHistory();
   }, []);
+
+  const clearHistory = async () => {
+    await fetch('http://127.0.0.1:5000/clear_history', {
+      method: 'POST',
+    });
+    setHistory([]);
+  };
 
   const fetchHistory = async () => {
     const response = await fetch('http://127.0.0.1:5000/conversation_history');
