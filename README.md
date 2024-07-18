@@ -1,6 +1,14 @@
-# Sasefied- Real-Time Transcription System with Speaker Diarization
+# Sasefied- Real-Time Transcription System 
 
-This project implements a real-time transcription system using Flask for the backend and React for the frontend. It includes speaker diarization to distinguish between user and AI speech, saving conversations to a database, and providing real-time updates to the frontend.
+This project implements a real-time transcription system with speaker identification. The system captures audio input in real-time, transcribes the audio using a speech recognition library, identifies the speaker, and stores the conversation in a database for post-processing and summarization.
+
+# Features
+
+- Real-time audio processing and transcription
+- Speaker diarization (identifying different speakers)
+- Saving and retrieving conversation history
+- WebSocket support for real-time updates
+- Responsive frontend using React
 
 # Setup Instructions
 
